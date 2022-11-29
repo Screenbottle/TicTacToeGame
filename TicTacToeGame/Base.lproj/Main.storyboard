@@ -1,24 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToeGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wug-h4-Vzr">
+                                <rect key="frame" x="16" y="246" width="361" height="360"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jou-6A-iw6" userLabel="11">
+                                        <rect key="frame" x="8" y="8" width="110" height="110"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="3rG-XW-Gdg"/>
+                                            <constraint firstAttribute="height" constant="110" id="w4F-0k-DO9"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="FAI-7Z-v9x" appends="YES" id="A1H-Cq-FdQ"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEV-Sb-4is" userLabel="12">
+                                        <rect key="frame" x="125.66666666666666" y="8" width="110" height="110"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="QJK-Qj-DGd"/>
+                                            <constraint firstAttribute="height" constant="110" id="f0N-EV-YOO"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="u8F-GW-au5" appends="YES" id="mya-8R-VOw"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7U-Tx-rg1" userLabel="13">
+                                        <rect key="frame" x="243" y="8" width="110" height="110"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="WRo-or-hLQ"/>
+                                            <constraint firstAttribute="width" constant="110" id="yT8-uI-YWV"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="3nW-ya-yNv" appends="YES" id="mf4-H0-CK3"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAU-b0-3O5" userLabel="21">
+                                        <rect key="frame" x="7.6666666666666714" y="125" width="110" height="110"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="D3G-PI-vzo"/>
+                                            <constraint firstAttribute="width" constant="110" id="c9g-Cw-WNo"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="m3O-Z2-F7L" appends="YES" id="NmG-a4-Qxd"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJu-WE-A9v" userLabel="22">
+                                        <rect key="frame" x="125.66666666666666" y="125" width="110" height="110"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="Svw-lR-uZQ"/>
+                                            <constraint firstAttribute="width" constant="110" id="pTc-Sh-n58"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="NYe-Ee-4h1" appends="YES" id="F0W-QI-KjE"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lhc-GR-i5n" userLabel="23">
+                                        <rect key="frame" x="242.66666666666669" y="125" width="110" height="110"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="NoD-at-4LA"/>
+                                            <constraint firstAttribute="height" constant="110" id="bk3-ka-XHs"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="44h-Zr-DkX" appends="YES" id="QOr-XL-GaQ"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="giG-ha-vBC" userLabel="31">
+                                        <rect key="frame" x="8" y="243" width="110" height="110"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="mZQ-qd-GAc"/>
+                                            <constraint firstAttribute="height" constant="110" id="whZ-fd-2dw"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="SPW-wi-WRE" appends="YES" id="SOJ-Ww-0bn"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0aX-Bp-D8F" userLabel="32">
+                                        <rect key="frame" x="125.66666666666666" y="243" width="110" height="110"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="B3i-93-tkf"/>
+                                            <constraint firstAttribute="width" constant="110" id="xYI-W6-bmL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="F29-mS-CMP" appends="YES" id="TmT-Za-rfo"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RpF-X3-hkE" userLabel="33">
+                                        <rect key="frame" x="243" y="243" width="110" height="110"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="Ji4-70-fVc"/>
+                                            <constraint firstAttribute="height" constant="110" id="hyu-sC-7Pk"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="LUt-lk-oaH" appends="YES" id="OPc-6S-iCg"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="1c1-Sl-g8k"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q7U-Tx-rg1" secondAttribute="trailing" constant="8" id="45e-YL-97U"/>
+                                    <constraint firstAttribute="height" constant="360" id="8Sf-Md-lAM"/>
+                                    <constraint firstItem="BEV-Sb-4is" firstAttribute="centerX" secondItem="Wug-h4-Vzr" secondAttribute="centerX" id="98D-Kw-TXJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="RpF-X3-hkE" secondAttribute="bottom" constant="7" id="Bh9-kC-YVf"/>
+                                    <constraint firstItem="eJu-WE-A9v" firstAttribute="leading" secondItem="tAU-b0-3O5" secondAttribute="trailing" constant="7.6699999999999999" id="DX1-uV-fVh"/>
+                                    <constraint firstItem="jou-6A-iw6" firstAttribute="top" secondItem="Wug-h4-Vzr" secondAttribute="top" constant="8" id="DrT-r2-zqJ"/>
+                                    <constraint firstItem="eJu-WE-A9v" firstAttribute="top" secondItem="BEV-Sb-4is" secondAttribute="bottom" constant="7" id="SSJ-al-dBR"/>
+                                    <constraint firstItem="Lhc-GR-i5n" firstAttribute="leading" secondItem="eJu-WE-A9v" secondAttribute="trailing" constant="7.3300000000000001" id="UCL-Sd-qZf"/>
+                                    <constraint firstItem="Q7U-Tx-rg1" firstAttribute="top" secondItem="Wug-h4-Vzr" secondAttribute="top" constant="8" id="UDG-C2-7K8"/>
+                                    <constraint firstItem="eJu-WE-A9v" firstAttribute="centerY" secondItem="Wug-h4-Vzr" secondAttribute="centerY" id="W2m-1X-A6X"/>
+                                    <constraint firstItem="giG-ha-vBC" firstAttribute="leading" secondItem="Wug-h4-Vzr" secondAttribute="leading" constant="8" id="YXz-ET-HzN"/>
+                                    <constraint firstItem="eJu-WE-A9v" firstAttribute="centerX" secondItem="Wug-h4-Vzr" secondAttribute="centerX" id="bT6-cP-0D0"/>
+                                    <constraint firstAttribute="trailing" secondItem="RpF-X3-hkE" secondAttribute="trailing" constant="8" id="dmG-r2-dv3"/>
+                                    <constraint firstItem="0aX-Bp-D8F" firstAttribute="centerX" secondItem="Wug-h4-Vzr" secondAttribute="centerX" id="gXN-gp-37C"/>
+                                    <constraint firstItem="Lhc-GR-i5n" firstAttribute="centerY" secondItem="Wug-h4-Vzr" secondAttribute="centerY" id="m9L-cV-Qm0"/>
+                                    <constraint firstItem="0aX-Bp-D8F" firstAttribute="top" secondItem="eJu-WE-A9v" secondAttribute="bottom" constant="8" symbolic="YES" id="sag-da-Foh"/>
+                                    <constraint firstItem="jou-6A-iw6" firstAttribute="leading" secondItem="Wug-h4-Vzr" secondAttribute="leading" constant="8" id="sz6-QH-Qo0"/>
+                                    <constraint firstItem="tAU-b0-3O5" firstAttribute="centerY" secondItem="Wug-h4-Vzr" secondAttribute="centerY" id="yC6-hM-IP1"/>
+                                    <constraint firstAttribute="bottom" secondItem="giG-ha-vBC" secondAttribute="bottom" constant="7" id="zo9-Vi-zJ6"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcU-cb-dvf">
+                                <rect key="frame" x="118" y="154" width="157" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="hcU-cb-dvf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0cn-jc-tdm"/>
+                            <constraint firstItem="Wug-h4-Vzr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1Sf-hK-dvL"/>
+                            <constraint firstItem="hcU-cb-dvf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="2te-Cg-c2J"/>
+                            <constraint firstItem="Wug-h4-Vzr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CeN-lT-qyO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activePlayerLabel" destination="hcU-cb-dvf" id="PsE-3v-lQP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FAI-7Z-v9x" userLabel="Tile 11 Tap Recognizer">
+                    <connections>
+                        <action selector="tileTapped:" destination="BYZ-38-t0r" id="c6f-u9-AA4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="u8F-GW-au5" userLabel="Tile 12 Tap Recognizer">
+                    <connections>
+                        <action selector="tileTapped:" destination="BYZ-38-t0r" id="lUj-Al-xzW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3nW-ya-yNv" userLabel="Tile 13 Tap Recognizer">
+                    <connections>
+                        <action selector="tileTapped:" destination="BYZ-38-t0r" id="pgF-sD-EYI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="m3O-Z2-F7L" userLabel="Tile 21 Tap Recognizer">
+                    <connections>
+                        <action selector="tileTapped:" destination="BYZ-38-t0r" id="9z2-A1-kh8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="NYe-Ee-4h1" userLabel="Tile 22 Tap Recognizer">
+                    <connections>
+                        <action selector="tileTapped:" destination="BYZ-38-t0r" id="LOT-Cn-LgS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="44h-Zr-DkX" userLabel="Tile 23 Tap Recognizer">
+                    <connections>
+                        <action selector="tileTapped:" destination="BYZ-38-t0r" id="h45-aD-BSU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="SPW-wi-WRE" userLabel="Tile 31 Tap Recognizer">
+                    <connections>
+                        <action selector="tileTapped:" destination="BYZ-38-t0r" id="k2a-ZR-Q6h"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="F29-mS-CMP" userLabel="Tile 32 Tap Recognizer">
+                    <connections>
+                        <action selector="tileTapped:" destination="BYZ-38-t0r" id="Eac-zg-p5b"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="LUt-lk-oaH" userLabel="Tile 33 Tap Recognizer">
+                    <connections>
+                        <action selector="tileTapped:" destination="BYZ-38-t0r" id="GFA-uC-qto"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

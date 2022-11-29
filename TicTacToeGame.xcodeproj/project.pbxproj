@@ -16,6 +16,7 @@
 		426988E82936133B0042F132 /* TicTacToeGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426988E72936133B0042F132 /* TicTacToeGameTests.swift */; };
 		426988F22936133B0042F132 /* TicTacToeGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426988F12936133B0042F132 /* TicTacToeGameUITests.swift */; };
 		426988F42936133B0042F132 /* TicTacToeGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426988F32936133B0042F132 /* TicTacToeGameUITestsLaunchTests.swift */; };
+		4269890129363BC80042F132 /* GameStateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269890029363BC80042F132 /* GameStateHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		426988ED2936133B0042F132 /* TicTacToeGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		426988F12936133B0042F132 /* TicTacToeGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGameUITests.swift; sourceTree = "<group>"; };
 		426988F32936133B0042F132 /* TicTacToeGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4269890029363BC80042F132 /* GameStateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				426988D0293613370042F132 /* AppDelegate.swift */,
 				426988D2293613370042F132 /* SceneDelegate.swift */,
 				426988D4293613370042F132 /* ViewController.swift */,
+				4269890029363BC80042F132 /* GameStateHandler.swift */,
 				426988D6293613370042F132 /* Main.storyboard */,
 				426988D92936133B0042F132 /* Assets.xcassets */,
 				426988DB2936133B0042F132 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				426988D5293613370042F132 /* ViewController.swift in Sources */,
 				426988D1293613370042F132 /* AppDelegate.swift in Sources */,
+				4269890129363BC80042F132 /* GameStateHandler.swift in Sources */,
 				426988D3293613370042F132 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
