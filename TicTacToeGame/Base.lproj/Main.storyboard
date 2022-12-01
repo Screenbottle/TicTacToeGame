@@ -31,7 +31,7 @@
                                             <outletCollection property="gestureRecognizers" destination="FAI-7Z-v9x" appends="YES" id="A1H-Cq-FdQ"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEV-Sb-4is" userLabel="12">
+                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEV-Sb-4is" userLabel="12">
                                         <rect key="frame" x="125.66666666666666" y="8" width="110" height="110"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
@@ -43,7 +43,7 @@
                                             <outletCollection property="gestureRecognizers" destination="u8F-GW-au5" appends="YES" id="mya-8R-VOw"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7U-Tx-rg1" userLabel="13">
+                                    <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7U-Tx-rg1" userLabel="13">
                                         <rect key="frame" x="243" y="8" width="110" height="110"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
@@ -55,7 +55,7 @@
                                             <outletCollection property="gestureRecognizers" destination="3nW-ya-yNv" appends="YES" id="mf4-H0-CK3"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAU-b0-3O5" userLabel="21">
+                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAU-b0-3O5" userLabel="21">
                                         <rect key="frame" x="7.6666666666666714" y="125" width="110" height="110"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
@@ -67,7 +67,7 @@
                                             <outletCollection property="gestureRecognizers" destination="m3O-Z2-F7L" appends="YES" id="NmG-a4-Qxd"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJu-WE-A9v" userLabel="22">
+                                    <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJu-WE-A9v" userLabel="22">
                                         <rect key="frame" x="125.66666666666666" y="125" width="110" height="110"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
@@ -79,7 +79,7 @@
                                             <outletCollection property="gestureRecognizers" destination="NYe-Ee-4h1" appends="YES" id="F0W-QI-KjE"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lhc-GR-i5n" userLabel="23">
+                                    <imageView clipsSubviews="YES" tag="5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lhc-GR-i5n" userLabel="23">
                                         <rect key="frame" x="242.66666666666669" y="125" width="110" height="110"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
@@ -91,7 +91,7 @@
                                             <outletCollection property="gestureRecognizers" destination="44h-Zr-DkX" appends="YES" id="QOr-XL-GaQ"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="giG-ha-vBC" userLabel="31">
+                                    <imageView clipsSubviews="YES" tag="6" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="giG-ha-vBC" userLabel="31">
                                         <rect key="frame" x="8" y="243" width="110" height="110"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
@@ -103,7 +103,7 @@
                                             <outletCollection property="gestureRecognizers" destination="SPW-wi-WRE" appends="YES" id="SOJ-Ww-0bn"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0aX-Bp-D8F" userLabel="32">
+                                    <imageView clipsSubviews="YES" tag="7" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0aX-Bp-D8F" userLabel="32">
                                         <rect key="frame" x="125.66666666666666" y="243" width="110" height="110"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
@@ -115,7 +115,7 @@
                                             <outletCollection property="gestureRecognizers" destination="F29-mS-CMP" appends="YES" id="TmT-Za-rfo"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RpF-X3-hkE" userLabel="33">
+                                    <imageView clipsSubviews="YES" tag="8" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RpF-X3-hkE" userLabel="33">
                                         <rect key="frame" x="243" y="243" width="110" height="110"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
@@ -161,15 +161,21 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="hcU-cb-dvf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0cn-jc-tdm"/>
                             <constraint firstItem="Wug-h4-Vzr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1Sf-hK-dvL"/>
                             <constraint firstItem="hcU-cb-dvf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="2te-Cg-c2J"/>
                             <constraint firstItem="Wug-h4-Vzr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CeN-lT-qyO"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HrT-k8-RNX" appends="YES" id="TVY-0X-cLL"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="activePlayerLabel" destination="hcU-cb-dvf" id="PsE-3v-lQP"/>
+                        <outlet property="activePlayerLabel" destination="hcU-cb-dvf" id="Z1W-x7-cRn"/>
+                        <outlet property="board" destination="Wug-h4-Vzr" id="GIY-Mb-JlG"/>
+                        <outlet property="resetTapRecognizer" destination="HrT-k8-RNX" id="4qN-Jm-yD3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -216,6 +222,11 @@
                 <tapGestureRecognizer id="LUt-lk-oaH" userLabel="Tile 33 Tap Recognizer">
                     <connections>
                         <action selector="tileTapped:" destination="BYZ-38-t0r" id="GFA-uC-qto"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer enabled="NO" id="HrT-k8-RNX" userLabel="Reset Tap Recognizer">
+                    <connections>
+                        <action selector="resetBoard:" destination="BYZ-38-t0r" id="8JI-FI-rMU"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
