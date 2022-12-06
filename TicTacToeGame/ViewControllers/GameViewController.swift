@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
     
     @IBOutlet var resetTapRecognizer: UITapGestureRecognizer!
     
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var activePlayerLabel: UILabel!
     
-    let gameStateHandler = GameStateHandler()
+    var gameStateHandler = GameStateHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,35 +36,67 @@ class ViewController: UIViewController {
             if let imageView = sender.view as? UIImageView {
                 
                 // only places an image in an imageview if it is empty
-                print("poke")
                 if imageView.image == nil {
-                    print("poked")
+                    
                     // gets the image for the current player and puts it in the view
                     let activePlayer = gameStateHandler.activePlayer.rawValue
+                    let activePlayerName = gameStateHandler.activePlayerName
                     let image = UIImage(named: activePlayer)
                     
                     imageView.image = image
                     
                     gameStateHandler.placeAt(viewID: imageView.tag)
                     
-                    let winCheck = gameStateHandler.checkForWin()
+                    endTurn(activePlayerName: activePlayerName) {
+                        
+                        gameStateHandler.endTurn()
+                        setActivePlayerLabel()
+                        
+                        if gameStateHandler.gameType == .singlePlayer {
+                            computerTurn()
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func computerTurn() {
+        // chooses a tile and marks it
+        let chosenTile = gameStateHandler.computerTurn()
+        
+        for tile in board.subviews {
+            if tile.tag == chosenTile {
+                if let imageView = tile as? UIImageView {
                     
-                    if winCheck == "win" {
-                        setGameOverLabel(result: "Player \(activePlayer) wins!")
-                        resetTapRecognizer.isEnabled = true
-                    }
-                    else if winCheck == "tie" {
-                        setGameOverLabel(result: "It's a tie!")
-                        resetTapRecognizer.isEnabled = true
-                    }
-                    else {
+                    let activePlayer = gameStateHandler.activePlayer.rawValue
+                    let activePlayerName = gameStateHandler.activePlayerName
+                    let image = UIImage(named: activePlayer)
+                    
+                    imageView.image = image
+                    
+                    endTurn(activePlayerName: activePlayerName) {
                         gameStateHandler.endTurn()
                         setActivePlayerLabel()
                     }
-                    
-                    
                 }
             }
+        }
+    }
+    
+    func endTurn(activePlayerName: String, changeTurn: () -> Void) {
+        let winCheck = gameStateHandler.checkForWin()
+        
+        if winCheck == "win" {
+            setGameOverLabel(result: "\(activePlayerName) wins!")
+            resetTapRecognizer.isEnabled = true
+        }
+        else if winCheck == "tie" {
+            setGameOverLabel(result: "It's a tie!")
+            resetTapRecognizer.isEnabled = true
+        }
+        else {
+            changeTurn()
         }
     }
     
@@ -83,13 +115,14 @@ class ViewController: UIViewController {
     }
     
     func setGameOverLabel(result: String) {
+        // displays the result when the game is over
         activePlayerLabel.text = result
     }
     
     
     func setActivePlayerLabel() {
         // changes the label to match the player who's turn it is
-        activePlayerLabel.text = "Player \(gameStateHandler.activePlayer.rawValue)"
+        activePlayerLabel.text = gameStateHandler.activePlayerName
     }
 }
 
