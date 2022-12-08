@@ -43,31 +43,35 @@ class MenuViewController: UIViewController {
         }
     }
     
-
-    
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         var gameType: GameType
-        let player1Name = player1NameTextField.text
-        var player2Name : String?
+        var player1Name = player1NameTextField.text ?? "Player 1"
+        var player2Name = player2NameTextField.text ?? "Player 2"
         
         
         if gameTypeSwitch.isOn {
             gameType = .singlePlayer
+            player2Name = "Computer"
         }
         else {
             gameType = .multiPlayer
-            player2Name = player2NameTextField.text
+            
+        }
+        
+        if player1Name.isEmpty {
+            player1Name = "Player 1"
+        }
+        if player2Name.isEmpty {
+            player2Name = "Player 2"
         }
         
         
         if segue.identifier == startGameSegueID {
             let destinationVC = segue.destination as? GameViewController
-            destinationVC?.gameStateHandler = GameStateHandler(sentGameType: gameType, player1Name: player1Name ?? "Player 1", player2Name: player2Name ?? "Player 2")
+            destinationVC?.gameStateHandler = GameStateHandler(sentGameType: gameType, player1Name: player1Name , player2Name: player2Name)
         }
         
     }

@@ -9,12 +9,12 @@ import Foundation
 
 class GameStateHandler {
     
-    var activePlayer : TileStatus
-    var activePlayerName: String
+    var turnKeeper : TileStatus
+    var activePlayer: Player
     var gameOver: Bool
     var gameType: GameType
-    var player1Name: String
-    var player2Name: String
+    var player1: Player
+    var player2: Player
     
     private var boardGrid = [[TileStatus]]()
     private var availableTileIDs = [Int]()
@@ -22,17 +22,17 @@ class GameStateHandler {
     init(sentGameType: GameType = .singlePlayer, player1Name: String = "Player 1", player2Name: String = "Player 2") {
         
         self.gameOver = false
-        self.activePlayer = .X
+        self.turnKeeper = .X
         self.gameType = sentGameType
-        self.player1Name = player1Name
+        player1 = Player(name: player1Name)
         
         if self.gameType == .singlePlayer {
-            self.player2Name = "Computer"
+            self.player2 = Player(name: "Computer")
         }
         else {
-            self.player2Name = player2Name
+            self.player2 = Player(name: player2Name)
         }
-        self.activePlayerName = player1Name
+        self.activePlayer = self.player1
         
         makeBoard()
         
@@ -41,8 +41,8 @@ class GameStateHandler {
     // resets the game
     func newGame() {
         gameOver = false
-        activePlayer = .X
-        activePlayerName = player1Name
+        turnKeeper = .X
+        activePlayer.name = player1.name
         makeBoard()
     }
     
@@ -62,15 +62,15 @@ class GameStateHandler {
     
     // changes who the current player is
     func endTurn() {
-        switch activePlayer {
+        switch turnKeeper {
         case .X:
-            activePlayer = .O
-            activePlayerName = player2Name
+            turnKeeper = .O
+            activePlayer = player2
         case .O:
-            activePlayer = .X
-            activePlayerName = player1Name
+            turnKeeper = .X
+            activePlayer = player1
         default:
-            activePlayer = .X
+            turnKeeper = .X
         }
     }
     
@@ -79,7 +79,7 @@ class GameStateHandler {
         let yCord = viewID / 3
         let xCord = viewID % 3
 
-        boardGrid[yCord][xCord] = activePlayer
+        boardGrid[yCord][xCord] = turnKeeper
         
         // removes the tile from the list of available tiles, used in singleplayer
         if let index = availableTileIDs.firstIndex(of: viewID) {
@@ -87,30 +87,31 @@ class GameStateHandler {
         }
     }
     
-    func checkForWin() -> String {
+    func checkForWin() -> GameStatus {
         
         // checks rows and columns
         for i in 0...2 {
             if (boardGrid[i][0] == boardGrid[i][1] && boardGrid[i][0] == boardGrid[i][2] && boardGrid[i][0] != .empty) || (boardGrid[0][i] == boardGrid[1][i] && boardGrid[0][i] == boardGrid[2][i] && boardGrid[0][i] != .empty) {
                 gameOver = true
-                return "win"
+                return .win
             }
         }
         // checks diagonals
         if (boardGrid[0][0] == boardGrid[1][1] && boardGrid[0][0] == boardGrid[2][2] && boardGrid[0][0] != .empty) || (boardGrid[0][2] == boardGrid[1][1] && boardGrid[0][2] == boardGrid[2][0] && boardGrid[0][2] != .empty) {
             gameOver = true
-            return "win"
+            return .win
         }
         
         // if the entire array is filled, it's a tie
         if !boardGrid[0].contains(.empty) && !boardGrid[1].contains(.empty) && !boardGrid[2].contains(.empty) {
-            return "tie"
+            gameOver = true
+            return .tie
         }
         
-        return "false"
+        return .none
     }
     
-    // computer picks a tile at random
+    // computer picks a tile at random from the empty ones
     func computerTurn() -> Int {
         let random = Int.random(in: 0..<availableTileIDs.count)
         let chosenTile = availableTileIDs[random]
@@ -123,6 +124,8 @@ class GameStateHandler {
     
 }
 
+// some enums to make comparisons easier and more readable
+
 enum TileStatus: String {
     case empty
     case X
@@ -132,4 +135,10 @@ enum TileStatus: String {
 enum GameType: String {
     case singlePlayer
     case multiPlayer
+}
+
+enum GameStatus: String {
+    case win
+    case tie
+    case none
 }

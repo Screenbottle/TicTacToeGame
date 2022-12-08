@@ -18,6 +18,8 @@
 		426988F42936133B0042F132 /* TicTacToeGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426988F32936133B0042F132 /* TicTacToeGameUITestsLaunchTests.swift */; };
 		4269890129363BC80042F132 /* GameStateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269890029363BC80042F132 /* GameStateHandler.swift */; };
 		42698989293F3F320042F132 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42698988293F3F320042F132 /* MenuViewController.swift */; };
+		426989CA2941F3330042F132 /* chessSFX.wav in Resources */ = {isa = PBXBuildFile; fileRef = 426989C92941F3330042F132 /* chessSFX.wav */; };
+		426989CC294208B90042F132 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426989CB294208B90042F132 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		426988F32936133B0042F132 /* TicTacToeGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4269890029363BC80042F132 /* GameStateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateHandler.swift; sourceTree = "<group>"; };
 		42698988293F3F320042F132 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		426989C92941F3330042F132 /* chessSFX.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = chessSFX.wav; path = ../../../../Assets/SFX/chessSFX.wav; sourceTree = "<group>"; };
+		426989CB294208B90042F132 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		426988CF293613370042F132 /* TicTacToeGame */ = {
 			isa = PBXGroup;
 			children = (
+				426989C62941EEEB0042F132 /* Assets */,
 				42698986293F3E890042F132 /* ViewControllers */,
 				42698987293F3EEB0042F132 /* Model */,
 				426988D0293613370042F132 /* AppDelegate.swift */,
@@ -145,8 +150,17 @@
 			isa = PBXGroup;
 			children = (
 				4269890029363BC80042F132 /* GameStateHandler.swift */,
+				426989CB294208B90042F132 /* Player.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		426989C62941EEEB0042F132 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				426989C92941F3330042F132 /* chessSFX.wav */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +270,7 @@
 				426988DD2936133B0042F132 /* LaunchScreen.storyboard in Resources */,
 				426988DA2936133B0042F132 /* Assets.xcassets in Resources */,
 				426988D8293613370042F132 /* Main.storyboard in Resources */,
+				426989CA2941F3330042F132 /* chessSFX.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +299,7 @@
 				42698989293F3F320042F132 /* MenuViewController.swift in Sources */,
 				426988D1293613370042F132 /* AppDelegate.swift in Sources */,
 				4269890129363BC80042F132 /* GameStateHandler.swift in Sources */,
+				426989CC294208B90042F132 /* Player.swift in Sources */,
 				426988D3293613370042F132 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
